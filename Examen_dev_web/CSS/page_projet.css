@@ -1,0 +1,184 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(180deg, #1c1c1c, #333);
+    color: #fff;
+    position: fixed;
+    padding-top: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sidebar h2 span {
+    color: #e33b22;
+    font-weight: bold;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #e33b22;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar nav ul li a.active {
+    background-color: #e33b22;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Contenu principal */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #444;
+}
+
+/* Bouton Profil rond */
+#profilBtn {
+    width: 45px;
+    height: 45px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#profilBtn:hover {
+    background-color: #e33b22;
+    transform: scale(1.2);
+}
+
+/* Tableau des projets */
+.projects-list {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projects-list h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #444;
+}
+
+.projects-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.projects-list table th,
+.projects-list table td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.projects-list table th {
+    background-color: #e33b22;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.projects-list table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.projects-list table tr:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.3s;
+}
+
+/* Détails du projet */
+.project-details {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-details h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #444;
+}
+
+.project-card {
+    padding: 15px;
+    border: 2px solid #e33b22;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    color: #e33b22;
+    margin-bottom: 10px;
+}
+
+.project-card p,
+.project-card ul {
+    margin: 5px 0;
+}

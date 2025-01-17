@@ -1,0 +1,128 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Contenu principal */
+.main-content {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #444;
+    margin: 0;
+}
+
+.back-to-dashboard {
+    color: #e33b22;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.back-to-dashboard:hover {
+    text-decoration: underline;
+}
+
+/* Section Informations Personnelles */
+.profile-info {
+    margin-bottom: 40px;
+}
+
+.profile-info h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.info-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.info-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+.info-group p {
+    margin: 0;
+    color: #333;
+}
+
+/* Section Modification */
+.profile-edit h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #e33b22;
+    outline: none;
+    box-shadow: 0 0 4px rgba(227, 59, 34, 0.5);
+}
+
+button.save-btn {
+    background-color: #e33b22;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.save-btn:hover {
+    background-color: #b02a19;
+}
