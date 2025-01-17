@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idées Innovantes - TechInnova</title>
+    <link rel="stylesheet" href="/CSS/idees.css">
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2><span>TechIn</span>nova</h2>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                <li><a href="projets.html"><i class="fas fa-project-diagram"></i> Projets R&D</a></li>
+                <li><a href="idees.html" class="active"><i class="fas fa-lightbulb"></i> Idées Innovantes</a></li>
+                <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="calendrier.html"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Idées Innovantes</h1>
+            <div id="header-icons">
+                <a href="/HTML/notifications.html" id="notificationsBtn"><i class="fas fa-bell"></i></a>
+                <a href="profil.html" id="profilBtn"><i class="fas fa-user"></i></a>
+            </div>
+        </header>
+
+        <section class="ideas">
+            <div class="idea">
+                <h3><i class="fas fa-lightbulb"></i> Idée 1</h3>
+                <p>Description de l'idée 1</p>
+                <button class="viewDetailsBtn">Voir les détails</button>
+            </div>
+            <div class="idea">
+                <h3><i class="fas fa-lightbulb"></i> Idée 2</h3>
+                <p>Description de l'idée 2</p>
+                <button class="viewDetailsBtn">Voir les détails</button>
+            </div>
+            <!-- Ajouter d'autres idées ici -->
+        </section>
+
+        <section class="actions">
+            <button id="addIdeaBtn">Ajouter une Nouvelle Idée</button>
+        </section>
+
+        <!-- Modale pour ajouter une idée -->
+        <div id="addIdeaModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Ajouter une Nouvelle Idée</h2>
+                <form id="addIdeaForm">
+                    <label for="ideaTitle">Titre :</label>
+                    <input type="text" id="ideaTitle" name="ideaTitle" required>
+
+                    <label for="ideaDescription">Description :</label>
+                    <textarea id="ideaDescription" name="ideaDescription" required></textarea>
+
+                    <label for="ideaCategory">Catégorie :</label>
+                    <input type="text" id="ideaCategory" name="ideaCategory" required>
+
+                    <button type="submit">Ajouter l'Idée</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/JavaScrip/idees.js" defer></script>
+</body>
+</html>

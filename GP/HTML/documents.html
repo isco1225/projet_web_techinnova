@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents - TechInnova</title>
+    <link rel="stylesheet" href="/CSS/documents.css">
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2><span>TechIn</span>nova</h2>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                <li><a href="projets.html"><i class="fas fa-project-diagram"></i> Projets R&D</a></li>
+                <li><a href="idees.html"><i class="fas fa-lightbulb"></i> Idées Innovantes</a></li>
+                <li><a href="documents.html" class="active"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="calendrier.html"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Documents</h1>
+            <div id="header-icons">
+                <a href="/HTML/notifications.html" id="notificationsBtn"><i class="fas fa-bell"></i></a>
+                <a href="profil.html" id="profilBtn"><i class="fas fa-user"></i></a>
+            </div>
+        </header>
+
+        <section class="documents-list">
+            <div class="document">
+                <h3><i class="fas fa-file-alt"></i> Document 1</h3>
+                <p>Description du document 1</p>
+                <a href="#" class="downloadBtn"><i class="fas fa-download"></i> Télécharger</a>
+            </div>
+            <div class="document">
+                <h3><i class="fas fa-file-alt"></i> Document 2</h3>
+                <p>Description du document 2</p>
+                <a href="#" class="downloadBtn"><i class="fas fa-download"></i> Télécharger</a>
+            </div>
+            <!-- Ajouter d'autres documents ici -->
+        </section>
+
+        <section class="actions">
+            <button id="addDocumentBtn">Ajouter un Document</button>
+        </section>
+
+        <!-- Modale pour ajouter un document -->
+        <div id="addDocumentModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Ajouter un Document</h2>
+                <form id="addDocumentForm">
+                    <label for="documentTitle">Titre :</label>
+                    <input type="text" id="documentTitle" name="documentTitle" required>
+
+                    <label for="documentFile">Fichier :</label>
+                    <input type="file" id="documentFile" name="documentFile" required>
+
+                    <button type="submit">Ajouter le Document</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/JavaScrip/documents.js" defer></script>
+</body>
+</html>
