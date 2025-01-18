@@ -1,10 +1,11 @@
-/* Style général */
+/* Styles généraux */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Barre de navigation */
@@ -13,21 +14,23 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-bottom: 2px solid #ddd;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
     color: #333;
 }
 
 .logo span {
     color: #d13b22;
+    font-weight: bold;
 }
 
 .menu ul {
@@ -45,11 +48,13 @@ body {
     text-decoration: none;
     color: #d13b22;
     font-weight: bold;
-    transition: color 0.3s;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .menu ul li a:hover {
     color: #a11d17;
+    transform: scale(1.1);
 }
 
 /* Icône utilisateur */
@@ -68,18 +73,88 @@ body {
     color: #a11d17;
 }
 
-/* Contenu principal */
-.content {
-    padding: 20px;
+/* Section principale */
+.hero {
     text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #d13b22, #a11d17);
+    color: #fff;
 }
 
-.content h2 {
-    font-size: 28px;
+.hero h2 {
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
-.content p {
+.hero p {
     font-size: 18px;
-    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Résumé des projets */
+.project-summary {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.project-summary h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #d13b22;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+}
+
+.project h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Notifications */
+.notifications {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notifications h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #d13b22;
+}
+
+.notifications ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.notifications ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.notifications ul li i {
+    color: #d13b22;
+    margin-right: 10px;
+    font-size: 18px;
 }

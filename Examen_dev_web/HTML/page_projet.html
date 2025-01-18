@@ -26,53 +26,45 @@
         </div>
     </header>
 
-    <!-- Contenu principal pour les projets R&D -->
+    <!-- Contenu principal -->
     <main id="content">
         <h2>Projets R&D</h2>
-        <p>Voici la liste des projets en cours, terminés ou à venir.</p>
+        <p class="intro">Voici la liste des projets auxquels vous avez accès.</p>
 
-        <!-- Tableau des projets -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Titre</th>
-                    <th>Description</th>
-                    <th>État</th>
-                    <th>Membres</th>
-                    <th>Échéance</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Projet Alpha</td>
-                    <td>Développement d'une nouvelle IA.</td>
-                    <td>En cours</td>
-                    <td>Jean Dupont, Marie Curie</td>
-                    <td>30/01/2025</td>
-                </tr>
-                <tr>
-                    <td>Projet Beta</td>
-                    <td>Optimisation des systèmes embarqués.</td>
-                    <td>Terminé</td>
-                    <td>Sophie Martin</td>
-                    <td>15/12/2024</td>
-                </tr>
-                <tr>
-                    <td>Projet Gamma</td>
-                    <td>Recherche sur les énergies renouvelables.</td>
-                    <td>À venir</td>
-                    <td>Paul Durand</td>
-                    <td>01/06/2025</td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- Barre de recherche -->
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher un projet..." id="search-input">
+            <button><i class="fas fa-search"></i></button>
+        </div>
 
-        <!-- Bouton pour ajouter un nouveau projet -->
-        <div class="add-project">
-            <button onclick="window.location.href='ajouter_projet.html'">
-                <i class="fas fa-plus"></i> Ajouter un projet
-            </button>
+        <!-- Liste des projets -->
+        <section class="projects">
+            <article class="project">
+                <h3>Projet Alpha</h3>
+                <p><strong>Description :</strong> Développement d'une IA innovante.</p>
+                <p><strong>Avancement :</strong> 50%</p>
+                <p><strong>Échéance :</strong> 30/01/2025</p>
+                <button class="view-details" onclick="viewDetails('Projet Alpha')">Voir les Détails</button>
+            </article>
+            <article class="project">
+                <h3>Projet Beta</h3>
+                <p><strong>Description :</strong> Optimisation des systèmes embarqués.</p>
+                <p><strong>Avancement :</strong> Terminé</p>
+                <p><strong>Échéance :</strong> 15/12/2024</p>
+                <button class="view-details" onclick="viewDetails('Projet Beta')">Voir les Détails</button>
+            </article>
+        </section>
+
+        <!-- Mode Lecture Restriction -->
+        <div class="restriction">
+            <p><i class="fas fa-info-circle"></i> Les projets sont consultables uniquement en mode lecture.</p>
         </div>
     </main>
+
+    <script>
+        function viewDetails(projet) {
+            alert(`Vous consultez les détails de : ${projet}`);
+        }
+    </script>
 </body>
 </html>

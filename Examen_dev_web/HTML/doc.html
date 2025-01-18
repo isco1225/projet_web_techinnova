@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Barre de navigation -->
     <header class="navbar">
         <div class="logo">
             <h1><span>TECHIN</span>NOVA</h1>
@@ -17,7 +18,7 @@
                 <li><a href="interface.html" data-page="accueil">Accueil</a></li>
                 <li><a href="page_projet.html" data-page="projets">Projets R&D</a></li>
                 <li><a href="idee_inov.html" data-page="idees">Idées innovantes</a></li>
-                <li><a href="doc.html" data-page="documents">Documents</a></li>
+                <li><a href="doc.html" class="active" data-page="documents">Documents</a></li>
             </ul>
         </nav>
         <div class="user-icon">
@@ -25,21 +26,36 @@
         </div>
     </header>
 
+    <!-- Contenu principal -->
     <main id="content">
-        <h2>Documents</h2>
-        <div class="document">
-            <h3>Document 1</h3>
-            <p><strong>Description :</strong> Rapport de recherche sur l'IA.</p>
-            <p><strong>Catégorie :</strong> Intelligence Artificielle</p>
-            <button>Télécharger</button>
-            <button>Afficher</button>
-        </div>
-        <div class="document">
-            <h3>Document 2</h3>
-            <p><strong>Description :</strong> Étude sur la gestion de projets.</p>
-            <p><strong>Catégorie :</strong> Gestion de Projet</p>
-            <button>Télécharger</button>
-            <button>Afficher</button>
+        <h2>Documents Partagés</h2>
+        <p class="intro">Consultez et téléchargez les documents liés aux projets collaboratifs. Les documents sont organisés par catégorie ou projet.</p>
+
+        <!-- Organisation des documents par catégorie -->
+        <section class="categories">
+            <div class="category">
+                <h3>Intelligence Artificielle</h3>
+                <div class="document">
+                    <h4>Rapport IA</h4>
+                    <p><strong>Description :</strong> Analyse des modèles d'IA récents.</p>
+                    <button class="download-button"><i class="fas fa-download"></i> Télécharger</button>
+                    <button class="view-button"><i class="fas fa-eye"></i> Afficher</button>
+                </div>
+            </div>
+            <div class="category">
+                <h3>Gestion de Projet</h3>
+                <div class="document">
+                    <h4>Guide de gestion</h4>
+                    <p><strong>Description :</strong> Bonnes pratiques pour la gestion de projets collaboratifs.</p>
+                    <button class="download-button"><i class="fas fa-download"></i> Télécharger</button>
+                    <button class="view-button"><i class="fas fa-eye"></i> Afficher</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message de restriction -->
+        <div class="restriction">
+            <p><i class="fas fa-info-circle"></i> Vous ne pouvez ni modifier ni supprimer les documents partagés.</p>
         </div>
     </main>
 </body>

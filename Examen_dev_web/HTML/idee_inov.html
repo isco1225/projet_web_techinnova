@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets R&D - TechInnova</title>
+    <title>Idées Innovantes - TechInnova</title>
     <link rel="stylesheet" href="/CSS/idee_inov.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Barre de navigation -->
     <header class="navbar">
         <div class="logo">
             <h1><span>TECHIN</span>NOVA</h1>
@@ -16,7 +17,7 @@
             <ul>
                 <li><a href="interface.html" data-page="accueil">Accueil</a></li>
                 <li><a href="page_projet.html" data-page="projets">Projets R&D</a></li>
-                <li><a href="idee_inov.html" data-page="idees">Idées innovantes</a></li>
+                <li><a href="idee_inov.html" class="active" data-page="idees">Idées innovantes</a></li>
                 <li><a href="doc.html" data-page="documents">Documents</a></li>
             </ul>
         </nav>
@@ -25,22 +26,48 @@
         </div>
     </header>
 
+    <!-- Contenu principal -->
     <main id="content">
-        <h2>Projets R&D</h2>
-        <div class="project">
-            <h3>Projet 1</h3>
-            <p><strong>Description :</strong> Description du projet 1.</p>
-            <p><strong>Membres :</strong> Nom1, Nom2, Nom3</p>
-            <p><strong>Échéance :</strong> 15/03/2025</p>
-            <button>Voir Détails</button>
+        <h2>Idées Innovantes</h2>
+        <p class="intro">Explorez les idées ouvertes à la collaboration.</p>
+
+        <!-- Barre de recherche -->
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher une idée..." id="search-input">
+            <button><i class="fas fa-search"></i></button>
         </div>
-        <div class="project">
-            <h3>Projet 2</h3>
-            <p><strong>Description :</strong> Description du projet 2.</p>
-            <p><strong>Membres :</strong> NomA, NomB, NomC</p>
-            <p><strong>Échéance :</strong> 30/06/2025</p>
-            <button>Voir Détails</button>
+
+        <!-- Section des idées ouvertes -->
+        <div class="ideas-container">
+            <div class="idea">
+                <h3>Idée Alpha</h3>
+                <p><strong>Description :</strong> Développement d'une nouvelle technologie d'intelligence artificielle.</p>
+                <a href="commentaire.html" class="comment-button"><i class="fas fa-comment-alt"></i> Commenter</a>
+                <button class="vote-button" onclick="incrementVote(this)"><i class="fas fa-thumbs-up"></i> Voter</button>
+                <span class="vote-count">Votes : 10</span>
+            </div>
+            <div class="idea">
+                <h3>Idée Beta</h3>
+                <p><strong>Description :</strong> Optimisation des systèmes embarqués pour les véhicules autonomes.</p>
+                <a href="commentaire.html" class="comment-button"><i class="fas fa-comment-alt"></i> Commenter</a>
+                <button class="vote-button" onclick="incrementVote(this)"><i class="fas fa-thumbs-up"></i> Voter</button>
+                <span class="vote-count">Votes : 5</span>
+            </div>
+        </div>
+
+        <!-- Restrictions pour les utilisateurs -->
+        <div class="restriction">
+            <p><i class="fas fa-info-circle"></i> Vous n'êtes pas autorisé à soumettre de nouvelles idées.</p>
         </div>
     </main>
+
+    <script>
+        // Fonction pour incrémenter les votes
+        function incrementVote(button) {
+            const voteCount = button.nextElementSibling;
+            const currentVotes = parseInt(voteCount.textContent.replace('Votes : ', ''));
+            voteCount.textContent = `Votes : ${currentVotes + 1}`;
+        }
+    </script>
 </body>
 </html>
