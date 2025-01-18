@@ -3,79 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets Collaboratifs - Collaborateur Externe</title>
+    <title>Projets R&D - TechInnova</title>
     <link rel="stylesheet" href="/CSS/page_projet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2><span>TechIn</span>nova</h2>
-        <nav>
+    <!-- Barre de navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <h1><span>TECHIN</span>NOVA</h1>
+        </div>
+        <nav class="menu">
             <ul>
-                <li><a href="dashboard_collaborateur.html"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
-                <li><a href="idee_inov.html"><i class="fas fa-lightbulb"></i> Idées Innovantes</a></li>
-                <li><a href="doc.html"><i class="fas fa-file-alt"></i> Documents Partagés</a></li>
-                <li><a href="calendrier_externe.html"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
-                <li><a href="contact_support.html"><i class="fas fa-envelope"></i> Contact & Support</a></li>
+                <li><a href="interface.html" data-page="accueil">Accueil</a></li>
+                <li><a href="page_projet.html" class="active" data-page="projets">Projets R&D</a></li>
+                <li><a href="idee_inov.html" data-page="idees">Idées innovantes</a></li>
+                <li><a href="doc.html" data-page="documents">Documents</a></li>
             </ul>
         </nav>
-    </div>
+        <div class="user-icon">
+            <a href="page_utilisateur.html"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </header>
 
-    <!-- Contenu Principal -->
-    <div class="main-content">
-        <header>
-            <h1>Projets Collaboratifs</h1>
-        </header>
+    <!-- Contenu principal pour les projets R&D -->
+    <main id="content">
+        <h2>Projets R&D</h2>
+        <p>Voici la liste des projets en cours, terminés ou à venir.</p>
 
-        <!-- Liste des projets -->
-        <section class="projects-list">
-            <h2>Liste des Projets</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Titre</th>
-                        <th>Description</th>
-                        <th>Avancement</th>
-                        <th>Échéance</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Innovation AI</td>
-                        <td>Recherche et développement d'algorithmes IA avancés.</td>
-                        <td>50%</td>
-                        <td>15 février 2025</td>
-                    </tr>
-                    <tr>
-                        <td>Green Tech</td>
-                        <td>Développement de solutions technologiques écoresponsables.</td>
-                        <td>75%</td>
-                        <td>1 mars 2025</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <!-- Tableau des projets -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Description</th>
+                    <th>État</th>
+                    <th>Membres</th>
+                    <th>Échéance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Projet Alpha</td>
+                    <td>Développement d'une nouvelle IA.</td>
+                    <td>En cours</td>
+                    <td>Jean Dupont, Marie Curie</td>
+                    <td>30/01/2025</td>
+                </tr>
+                <tr>
+                    <td>Projet Beta</td>
+                    <td>Optimisation des systèmes embarqués.</td>
+                    <td>Terminé</td>
+                    <td>Sophie Martin</td>
+                    <td>15/12/2024</td>
+                </tr>
+                <tr>
+                    <td>Projet Gamma</td>
+                    <td>Recherche sur les énergies renouvelables.</td>
+                    <td>À venir</td>
+                    <td>Paul Durand</td>
+                    <td>01/06/2025</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <!-- Détails d'un projet -->
-        <section class="project-details">
-            <h2>Détails du Projet</h2>
-            <div class="project-card">
-                <h3>Titre : Innovation AI</h3>
-                <p><strong>Description :</strong> Recherche et développement d'algorithmes IA avancés pour l'analyse de données complexes.</p>
-                <p><strong>Avancement :</strong> 50%</p>
-                <p><strong>Tâches assignées :</strong></p>
-                <ul>
-                    <li>Collecte de données.</li>
-                    <li>Préparation des modèles.</li>
-                    <li>Tests et validation.</li>
-                </ul>
-                <p><strong>Échéance :</strong> 15 février 2025</p>
-            </div>
-        </section>
-    </div>
-
-    <!-- JavaScript -->
-    <script src="/JavaScript/projets_externe.js" defer></script>
+        <!-- Bouton pour ajouter un nouveau projet -->
+        <div class="add-project">
+            <button onclick="window.location.href='ajouter_projet.html'">
+                <i class="fas fa-plus"></i> Ajouter un projet
+            </button>
+        </div>
+    </main>
 </body>
 </html>

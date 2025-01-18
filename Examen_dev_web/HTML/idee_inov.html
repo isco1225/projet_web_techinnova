@@ -3,54 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idées Innovantes - TechInnova</title>
+    <title>Projets R&D - TechInnova</title>
     <link rel="stylesheet" href="/CSS/idee_inov.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2><span>TechIn</span>nova</h2>
-        <nav>
+    <header class="navbar">
+        <div class="logo">
+            <h1><span>TECHIN</span>NOVA</h1>
+        </div>
+        <nav class="menu">
             <ul>
-                <li><a href="dashboard_collaborateur.html"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
-                <li><a href="idee_inov.html" class="active"><i class="fas fa-lightbulb"></i> Idées Innovantes</a></li>
-                <li><a href="doc.html"><i class="fas fa-file-alt"></i> Documents Partagés</a></li>
-                <li><a href="calendrier_externe.html"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
-                <li><a href="contact_support.html"><i class="fas fa-envelope"></i> Contact & Support</a></li>
+                <li><a href="interface.html" data-page="accueil">Accueil</a></li>
+                <li><a href="page_projet.html" data-page="projets">Projets R&D</a></li>
+                <li><a href="idee_inov.html" data-page="idees">Idées innovantes</a></li>
+                <li><a href="doc.html" data-page="documents">Documents</a></li>
             </ul>
         </nav>
-    </div>
+        <div class="user-icon">
+            <a href="page_utilisateur.html"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </header>
 
-    <!-- Contenu Principal -->
-    <div class="main-content">
-        <header>
-            <h1>Idées Innovantes</h1>
-        </header>
-
-        <!-- Liste des idées -->
-        <section class="ideas-list">
-            <h2>Idées ouvertes à la collaboration</h2>
-            <div class="idea-card">
-                <h3>Optimisation IA pour la santé</h3>
-                <p>Développement d'un algorithme pour améliorer la détection précoce des maladies chroniques.</p>
-                <div class="interaction">
-                    <button class="vote-btn"><i class="fas fa-thumbs-up"></i> Voter</button>
-                    <button class="comment-btn"><i class="fas fa-comment"></i> Commenter</button>
-                </div>
-            </div>
-            <div class="idea-card">
-                <h3>Technologie verte pour les bâtiments</h3>
-                <p>Recherche sur l'intégration de capteurs solaires dans les structures urbaines.</p>
-                <div class="interaction">
-                    <button class="vote-btn"><i class="fas fa-thumbs-up"></i> Voter</button>
-                    <button class="comment-btn"><i class="fas fa-comment"></i> Commenter</button>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- JavaScript -->
-    <script src="/JavaScript/idee_innovante.js" defer></script>
+    <main id="content">
+        <h2>Projets R&D</h2>
+        <div class="project">
+            <h3>Projet 1</h3>
+            <p><strong>Description :</strong> Description du projet 1.</p>
+            <p><strong>Membres :</strong> Nom1, Nom2, Nom3</p>
+            <p><strong>Échéance :</strong> 15/03/2025</p>
+            <button>Voir Détails</button>
+        </div>
+        <div class="project">
+            <h3>Projet 2</h3>
+            <p><strong>Description :</strong> Description du projet 2.</p>
+            <p><strong>Membres :</strong> NomA, NomB, NomC</p>
+            <p><strong>Échéance :</strong> 30/06/2025</p>
+            <button>Voir Détails</button>
+        </div>
+    </main>
 </body>
 </html>
