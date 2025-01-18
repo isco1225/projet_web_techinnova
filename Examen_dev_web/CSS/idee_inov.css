@@ -65,9 +65,15 @@ body {
 }
 
 /* Icône utilisateur */
+.user-icons {
+    display: flex;
+    align-items: center;
+}
+
 .user-icon {
     font-size: 24px;
     color: #d13b22;
+    margin-left: 15px; /* Espace entre les icônes */
 }
 
 .user-icon a {
@@ -79,7 +85,6 @@ body {
 .user-icon a:hover {
     color: #a11d17;
 }
-
 
 /* Barre de recherche */
 .search-bar {
@@ -182,6 +187,7 @@ body {
 .comment-button:hover {
     background-color: #a11d17;
     transform: scale(1.05);
+    color: white;
 }
 
 .vote-button i,
@@ -234,4 +240,26 @@ a {
 
 a:hover {
     color: #a11d17;
+}
+
+
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main h2 {
+    font-size: 32px;
+    color: #d13b22;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main .intro {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
 }

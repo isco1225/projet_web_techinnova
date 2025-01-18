@@ -62,9 +62,15 @@ body {
 }
 
 /* Icône utilisateur */
+.user-icons {
+    display: flex;
+    align-items: center;
+}
+
 .user-icon {
     font-size: 24px;
     color: #d13b22;
+    margin-left: 15px; /* Espace entre les icônes */
 }
 
 .user-icon a {
@@ -76,7 +82,6 @@ body {
 .user-icon a:hover {
     color: #a11d17;
 }
-
 /* Contenu principal */
 main {
     padding: 20px;

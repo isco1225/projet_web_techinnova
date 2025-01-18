@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets R&D - TechInnova</title>
-    <link rel="stylesheet" href="/CSS/page_projet.css">
+    <link rel="stylesheet" href="/CSS/notification.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -33,38 +33,18 @@
 
     <!-- Contenu principal -->
     <main id="content">
-        <h2>Projets R&D</h2>
-        <p class="intro">Voici la liste des projets auxquels vous avez accès.</p>
-
-        <!-- Barre de recherche -->
-        <div class="search-bar">
-            <input type="text" placeholder="Rechercher un projet..." id="search-input">
-            <button><i class="fas fa-search"></i></button>
-        </div>
+        <h2>Notifications</h2>
 
         <!-- Liste des projets -->
-        <section class="projects">
-            <article class="project">
-                <h3>Projet Alpha</h3>
-                <p><strong>Description :</strong> Développement d'une IA innovante.</p>
-                <p><strong>Avancement :</strong> 50%</p>
-                <p><strong>Échéance :</strong> 30/01/2025</p>
-                <button class="view-details" onclick="viewDetails('Projet Alpha')">Voir les Détails</button>
-            </article>
-            <article class="project">
-                <h3>Projet Beta</h3>
-                <p><strong>Description :</strong> Optimisation des systèmes embarqués.</p>
-                <p><strong>Avancement :</strong> Terminé</p>
-                <p><strong>Échéance :</strong> 15/12/2024</p>
-                <button class="view-details" onclick="viewDetails('Projet Beta')">Voir les Détails</button>
-            </article>
+        <section class="notifications">
+                <li><i class="fas fa-bell"></i> Nouvelle tâche ajoutée dans le projet Alpha.</li>
+                <li><i class="fas fa-bell"></i> Échéance du projet Beta le 15/03/2025.</li>
+                <li><i class="fas fa-bell"></i> Un commentaire a été ajouté dans le projet Alpha.</li>
+      
         </section>
 
-        <!-- Mode Lecture Restriction -->
-        <div class="restriction">
-            <p><i class="fas fa-info-circle"></i> Les projets sont consultables uniquement en mode lecture.</p>
-        </div>
     </main>
+
 
     <script>
         function viewDetails(projet) {
@@ -73,3 +53,6 @@
     </script>
 </body>
 </html>
+
+
+
