@@ -14,7 +14,7 @@ body {
     justify-content: center;
     margin: 20px auto;
     gap: 10px;
-    max-width: 600px; /* Limite la largeur totale de la barre de recherche */
+    max-width: 600px;
 }
 
 .search-bar input {
@@ -112,7 +112,7 @@ body {
 .user-icon {
     font-size: 24px;
     color: #d13b22;
-    margin-left: 15px; /* Espace entre les icônes */
+    margin-left: 15px;
 }
 
 .user-icon a {
@@ -179,7 +179,13 @@ main .intro {
     color: #555;
 }
 
-.view-details {
+.project-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.view-details, .participation-request {
     background-color: #d13b22;
     color: white;
     border: none;
@@ -190,7 +196,7 @@ main .intro {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.view-details:hover {
+.view-details:hover, .participation-request:hover {
     background-color: #a11d17;
     transform: scale(1.05);
 }
@@ -206,3 +212,4 @@ main .intro {
     color: #d13b22;
     font-size: 16px;
 }
+

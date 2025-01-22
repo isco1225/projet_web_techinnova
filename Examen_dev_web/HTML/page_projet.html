@@ -49,14 +49,20 @@
                 <p><strong>Description :</strong> Développement d'une IA innovante.</p>
                 <p><strong>Avancement :</strong> 50%</p>
                 <p><strong>Échéance :</strong> 30/01/2025</p>
-                <button class="view-details" onclick="viewDetails('Projet Alpha')">Voir les Détails</button>
+                <div class="project-actions">
+                    <a href="detail.html"><button class="view-details">Voir les Détails</button></a>
+                    <button class="participation-request" onclick="requestParticipation('Projet Alpha')">Demande de participation</button>
+                </div>
             </article>
             <article class="project">
                 <h3>Projet Beta</h3>
                 <p><strong>Description :</strong> Optimisation des systèmes embarqués.</p>
                 <p><strong>Avancement :</strong> Terminé</p>
                 <p><strong>Échéance :</strong> 15/12/2024</p>
-                <button class="view-details" onclick="viewDetails('Projet Beta')">Voir les Détails</button>
+                <div class="project-actions">
+                    <a href="detail.html"><button class="view-details">Voir les Détails</button></a>
+                    <button class="participation-request">Demande de participation</button>
+                </div>
             </article>
         </section>
 
@@ -66,10 +72,8 @@
         </div>
     </main>
 
-    <script>
-        function viewDetails(projet) {
-            alert(`Vous consultez les détails de : ${projet}`);
-        }
-    </script>
+
 </body>
 </html>
+
+
