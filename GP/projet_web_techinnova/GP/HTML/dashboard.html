@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Chercheur - TechInnova</title>
     <link rel="stylesheet" href="/CSS/dashboard.css">
+    <!-- Lien vers Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Barre de navigation en haut -->
-    <div class="top-nav">
+    <div class="sidebar">
         <h2><span>TechIn</span>nova</h2>
         <nav>
             <ul>
@@ -20,16 +20,16 @@
                 <li><a href="calendrier.html"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
             </ul>
         </nav>
-        <div id="header-icons">
-            <a href="/HTML/notifications.html" id="notificationsBtn"><i class="fas fa-bell"></i></a>
-            <a href="#" id="profilBtn"><i class="fas fa-user"></i></a>
-        </div>
     </div>
 
     <div class="main-content">
-        <section class="welcome-section">
-            <h2 id="welcome-text">Bienvenue sur votre tableau de bord, Chercheur !</h2>
-        </section>
+        <header>
+            <h1>Bienvenue, Chercheur</h1>
+            <div id="header-icons">
+                <a href="/HTML/notifications.html" id="notificationsBtn"><i class="fas fa-bell"></i></a>
+                <a href="profil.html" id="profilBtn"><i class="fas fa-user"></i></a>
+            </div>
+        </header>
 
         <section class="stats">
             <div class="card">
@@ -67,20 +67,6 @@
 
                     <button type="submit">Ajouter le Projet</button>
                 </form>
-            </div>
-        </div>
-
-        <!-- Interface Profil -->
-        <div id="profileInterface" class="profile-interface">
-            <div class="profile-info">
-                <img src="profile.jpg" alt="Image de Profil" class="profile-img">
-                <div class="profile-details">
-                    <h3>Nom: Jean Dupont</h3>
-                    <p>Poste: Chercheur Principal</p>
-                    <p>Email: jean.dupont@techinnova.com</p>
-                    <p>Département: R&D</p>
-                    <button id="logoutBtn">Se Déconnecter</button>
-                </div>
             </div>
         </div>
     </div>

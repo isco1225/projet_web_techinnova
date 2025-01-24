@@ -1,105 +1,129 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Récupérer tous les liens de la sidebar
-    const navLinks = document.querySelectorAll('.sidebar nav ul li a');
+    // Sidebar : Ajouter la classe active en fonction de la page
+    const navLinks = document.querySelectorAll('.top-nav .nav-links ul li a');
     
-    // Vérifier la page actuelle et ajouter la classe active
     navLinks.forEach(link => {
         if (window.location.pathname.includes(link.getAttribute('href'))) {
-            link.classList.add('active'); // Ajouter la classe active
+            link.classList.add('active');
         } else {
-            link.classList.remove('active'); // Retirer la classe active des autres
+            link.classList.remove('active');
         }
     });
 
-    // Gestion du clic sur l'icône des notifications
+    // Gestion du bouton Notifications
     const notificationsBtn = document.getElementById('notificationsBtn');
     if (notificationsBtn) {
-        notificationsBtn.addEventListener('click', function (event) {
-            // Rediriger vers la page des notifications
-            window.location.href = 'notifications.html';
+        notificationsBtn.addEventListener('click', function () {
+            window.location.href = 'notifications.html'; // Rediriger vers la page des notifications
         });
     }
 
-    // Gestion du bouton "Ajouter un document"
+    // Gestion du bouton Ajouter un document
     const addDocumentBtn = document.getElementById('addDocumentBtn');
     const addDocumentModal = document.getElementById('addDocumentModal');
     const closeModalBtn = document.querySelector('.close');
 
     if (addDocumentBtn) {
         addDocumentBtn.addEventListener('click', function () {
-            // Afficher la modale pour ajouter un document
-            addDocumentModal.style.display = 'block';
+            addDocumentModal.style.display = 'block'; // Afficher la modale pour ajouter un document
         });
     }
 
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', function () {
-            // Fermer la modale
-            addDocumentModal.style.display = 'none';
+            addDocumentModal.style.display = 'none'; // Fermer la modale
         });
     }
 
-    // Si l'utilisateur clique en dehors de la modale, la fermer
+    // Fermer la modale si l'utilisateur clique en dehors
     window.addEventListener('click', function (event) {
         if (event.target === addDocumentModal) {
             addDocumentModal.style.display = 'none';
         }
     });
 
-    // Gestion du formulaire pour ajouter un document
+    // Gestion du formulaire d'ajout de document
     const addDocumentForm = document.getElementById('addDocumentForm');
-    addDocumentForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Empêcher le rechargement de la page
+    if (addDocumentForm) {
+        addDocumentForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Empêcher le rechargement de la page
 
-        // Récupérer les données du formulaire
-        const documentTitle = document.getElementById('documentTitle').value;
-        const documentFile = document.getElementById('documentFile').files[0];
+            // Récupérer les données du formulaire
+            const documentTitle = document.getElementById('documentTitle').value;
+            const documentFile = document.getElementById('documentFile').files[0];
 
-        // Implémenter la logique pour enregistrer le document
+            // Implémenter la logique pour enregistrer le document ici
 
-        // Fermer la modale après soumission
-        addDocumentModal.style.display = "none";
-
-        // Réinitialiser le formulaire
-        addDocumentForm.reset();
-    });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Récupérer l'icône du profil
-    const profilBtn = document.getElementById('profilBtn');
-    const profileModal = document.getElementById('profileModal');
-    const closeProfileBtn = document.querySelector('.close-profile');
-    const logoutBtn = document.getElementById('logoutBtn');
-
-    // Afficher la modale de profil
-    if (profilBtn) {
-        profilBtn.addEventListener('click', function () {
-            profileModal.style.display = 'block';
+            // Fermer la modale et réinitialiser le formulaire
+            addDocumentModal.style.display = 'none';
+            addDocumentForm.reset();
         });
     }
 
-    // Fermer la modale de profil
-    if (closeProfileBtn) {
-        closeProfileBtn.addEventListener('click', function () {
-            profileModal.style.display = 'none';
-        });
-    }
+    // Gestion des liens actifs dans la navigation
+    const navLinkss = document.querySelectorAll('.top-nav nav ul li a');
+    const currentPage = window.location.pathname;
 
-    // Si l'utilisateur clique en dehors de la modale, la fermer
-    window.addEventListener('click', function (event) {
-        if (event.target === profileModal) {
-            profileModal.style.display = 'none';
+    navLinkss.forEach((link) => {
+        if (link.href.includes(currentPage)) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
         }
     });
 
-    // Déconnexion
+  // Afficher l'interface du profil
+    const profilBtn = document.getElementById('profilBtn');
+    const profileInterface = document.createElement('div');
+    profileInterface.id = 'profileInterface';
+    profileInterface.style.position = 'absolute';
+    profileInterface.style.top = '50px';
+    profileInterface.style.right = '10px';
+    profileInterface.style.width = '300px';
+    profileInterface.style.height = '150px';
+    profileInterface.style.backgroundColor = '#fff';
+    profileInterface.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    profileInterface.style.borderRadius = '8px';
+    profileInterface.style.padding = '20px';
+    profileInterface.style.display = 'none'; // Initialement masqué
+
+    // Ajouter l'interface profil à la page
+    const topNav = document.querySelector('.top-nav');
+    topNav.appendChild(profileInterface);
+
+    const profileContent = `
+        <div style="text-align: center;">
+            <img src="https://via.placeholder.com/100" alt="Profil" style="border-radius: 50%; width: 60px; height: 60px;">
+            <h4>Nom Utilisateur</h4>
+            <p>Rôle : Chercheur</p>
+            <button id="logoutBtn" style="background-color: #d13b22; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Déconnexion</button>
+        </div>
+    `;
+
+    profileInterface.innerHTML = profileContent;
+
+    if (profilBtn) {
+        profilBtn.addEventListener('click', function (event) {
+            // Afficher ou masquer l'interface profil
+            profileInterface.style.display = (profileInterface.style.display === 'none' || profileInterface.style.display === '') ? 'block' : 'none';
+            event.stopPropagation(); // Empêche la propagation du clic pour éviter de fermer le profil immédiatement
+        });
+    }
+
+    // Fermer l'interface profil si l'utilisateur clique en dehors de celle-ci
+    window.addEventListener('click', function (event) {
+        if (event.target !== profilBtn && event.target !== profileInterface && !profileInterface.contains(event.target)) {
+            profileInterface.style.display = 'none';
+        }
+    });
+
+    // Simulation de la déconnexion
+    const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
         logoutBtn.addEventListener('click', function () {
-            // Ici, vous pouvez ajouter un script de déconnexion (par exemple, effacer la session)
-            alert("Vous êtes déconnecté !");
-            window.location.href = '/HTML/login.html'; // Rediriger vers la page de connexion
+            // Logique de déconnexion, ici on redirige simplement vers la page de connexion
+            window.location.href = 'login.html'; // Remplacer par l'URL de votre page de connexion
         });
     }
 });
+

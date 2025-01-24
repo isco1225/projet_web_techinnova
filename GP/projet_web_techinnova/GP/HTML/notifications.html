@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - TechInnova</title>
+    <link rel="stylesheet" href="/CSS/notifications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2><span>TechIn</span>nova</h2>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                <li><a href="projets.html"><i class="fas fa-project-diagram"></i> Projets R&D</a></li>
+                <li><a href="idees.html"><i class="fas fa-lightbulb"></i> Idées Innovantes</a></li>
+                <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="calendrier.html"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+                <li><a href="notifications.html" class="active"><i class="fas fa-bell"></i> Notifications</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Notifications</h1>
+            <div id="header-icons">
+                <a href="notifications.html" id="notificationsBtn" class="active"><i class="fas fa-bell"></i></a>
+                <a href="profil.html" id="profilBtn"><i class="fas fa-user"></i></a>
+            </div>
+        </header>
+
+        <section class="notifications-list">
+            <div class="notification unread">
+                <p>Un nouveau projet R&D a été ajouté.</p>
+                <button class="mark-read">Marquer comme lu</button>
+            </div>
+            <div class="notification unread">
+                <p>Votre idée a été acceptée pour évaluation.</p>
+                <button class="mark-read">Marquer comme lu</button>
+            </div>
+            <div class="notification read">
+                <p>Un document a été partagé dans votre projet.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="/JavaScript/notifications.js" defer></script>
+</body>
+</html>

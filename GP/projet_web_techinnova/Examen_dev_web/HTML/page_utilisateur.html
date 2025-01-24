@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Utilisateur - TechInnova</title>
+    <link rel="stylesheet" href="/CSS/page_utilisateur.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Contenu Principal -->
+    <div class="main-content">
+        <header>
+            <h1>Mon Profil</h1>
+            <a href="dashboard_collaborateur.html" class="back-to-dashboard"><i class="fas fa-arrow-left"></i> Retour au Tableau de bord</a>
+        </header>
+
+        <!-- Consultation du profil -->
+        <section class="profile-info">
+            <h2>Informations Personnelles</h2>
+            <div class="info-group">
+                <label>Nom :</label>
+                <p>Jean Dupont</p>
+            </div>
+            <div class="info-group">
+                <label>Email :</label>
+                <p>jean.dupont@example.com</p>
+            </div>
+            <div class="info-group">
+                <label>Rôle :</label>
+                <p>Collaborateur Externe</p>
+            </div>
+        </section>
+
+        <!-- Modification des informations -->
+        <section class="profile-edit">
+            <h2>Modifier mes Informations</h2>
+            <form action="/update_profile" method="post">
+                <div class="form-group">
+                    <label for="current-password">Mot de passe actuel :</label>
+                    <input type="password" id="current-password" name="current-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password">Nouveau mot de passe :</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmer le nouveau mot de passe :</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="save-btn"><i class="fas fa-save"></i> Enregistrer</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/JavaScript/profil_externe.js" defer></script>
+</body>
+</html>

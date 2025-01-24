@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - TechInnova</title>
+    <link rel="stylesheet" href="/CSS/profil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barre de navigation en haut -->
+    <div class="top-nav">
+        <h2><span>TechIn</span>nova</h2>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                <li><a href="projets.html"><i class="fas fa-project-diagram"></i> Projets R&D</a></li>
+                <li><a href="idees.html"><i class="fas fa-lightbulb"></i> Idées Innovantes</a></li>
+                <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="calendrier.html"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+            </ul>
+        </nav>
+        <div id="header-icons">
+            <a href="/HTML/notifications.html" id="notificationsBtn"><i class="fas fa-bell"></i></a>
+            <a href="#" id="profilBtn"><i class="fas fa-user"></i></a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <header>
+            <h1>Mon Profil</h1>
+        </header>
+
+        <section class="profil-info">
+            <div class="profil-header">
+                <img src="https://via.placeholder.com/150" alt="Photo de profil" class="profil-photo">
+                <div class="profil-details">
+                    <h2>Jean Dupont</h2>
+                    <p><strong>Email:</strong> jean.dupont@techinnova.com</p>
+                    <p><strong>Rôle:</strong> Chercheur en R&D</p>
+                    <p><strong>Projets:</strong> 3 projets en cours</p>
+                </div>
+            </div>
+
+            <div class="profil-actions">
+                <button id="editProfileBtn">Éditer Profil</button>
+                <button id="logoutBtn">Se Déconnecter</button>
+            </div>
+        </section>
+
+        <!-- Modal Édition Profil -->
+        <div id="editProfileModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Éditer Profil</h2>
+                <form id="editProfileForm">
+                    <label for="name">Nom Complet</label>
+                    <input type="text" id="name" name="name" value="Jean Dupont" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="jean.dupont@techinnova.com" required>
+
+                    <label for="role">Rôle</label>
+                    <input type="text" id="role" name="role" value="Chercheur en R&D" required>
+
+                    <button type="submit">Sauvegarder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/JavaScrip/profil.js" defer></script>
+</body>
+</html>

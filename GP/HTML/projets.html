@@ -5,71 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets R&D - TechInnova</title>
     <link rel="stylesheet" href="/CSS/projets.css">
-    <!-- Lien vers Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="sidebar">
-        <h2><span>TechIn</span>nova</h2>
+    <!-- Barre de navigation supérieure -->
+    <header class="top-nav">
+        <h2>Tech<span>Innova</span></h2>
         <nav>
             <ul>
-                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
-                <li><a href="projets.html" class="active"><i class="fas fa-project-diagram"></i> Projets R&D</a></li>
-                <li><a href="idees.html"><i class="fas fa-lightbulb"></i> Idées Innovantes</a></li>
+                <li><a href="dashboard.html">Tableau de bord</a></li>
+                <li><a href="projets.html" class="active">Projets R&D</a></li>
+                <li><a href="idees.html">Idées Innovantes</a></li>
                 <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
                 <li><a href="calendrier.html"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
             </ul>
         </nav>
-    </div>
+        <div id="header-icons">
+            <a href="/HTML/notifications.html" id="notificationsBtn"><i class="fas fa-bell"></i></a>
+            <a href="#" id="profilBtn"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
 
-    <div class="main-content">
+    <!-- Section principale -->
+    <main class="main-content">
         <header>
             <h1>Projets R&D</h1>
-            <div id="header-icons">
-                <a href="/HTML/notifications.html" id="notificationsBtn"><i class="fas fa-bell"></i></a>
-                <a href="profil.html" id="profilBtn"><i class="fas fa-user"></i></a>
-            </div>
+            <div class="search-container">
+                <input type="text" id="searchIdea" placeholder="Rechercher une idée...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
         </header>
+        <!-- Bouton pour ajouter un projet -->
+        <button id="addProjectBtn">Ajouter un Nouveau Projet</button>
 
-        <section class="projects">
-            <div class="project">
-                <h3><i class="fas fa-project-diagram"></i> Projet 1</h3>
-                <p>Description du projet 1</p>
-                <button class="viewDetailsBtn">Voir les détails</button>
+        <!-- Section des projets -->
+        <section class="projects-section">
+            <div class="project-card" data-animation="slideIn">
+                <h3>Projet Alpha</h3>
+                <p>Développement d'un système IA pour l'optimisation des processus.</p>
+                <button class="details-btn">Voir les détails</button>
             </div>
-            <div class="project">
-                <h3><i class="fas fa-project-diagram"></i> Projet 2</h3>
-                <p>Description du projet 2</p>
-                <button class="viewDetailsBtn">Voir les détails</button>
+
+            <div class="project-card" data-animation="slideIn">
+                <h3>Projet Beta</h3>
+                <p>Recherche sur les énergies renouvelables pour les entreprises technologiques.</p>
+                <button class="details-btn">Voir les détails</button>
             </div>
-            <!-- Ajouter d'autres projets ici -->
+
+            <div class="project-card" data-animation="slideIn">
+                <h3>Projet Gamma</h3>
+                <p>Conception d'une application mobile pour la gestion des événements.</p>
+                <button class="details-btn">Voir les détails</button>
+            </div>
         </section>
 
-        <section class="actions">
-            <button id="addProjectBtn">Ajouter un Nouveau Projet</button>
-        </section>
-
-        <!-- Modale pour ajouter un projet -->
-        <div id="addProjectModal" class="modal">
+        <!-- Modale d'ajout de projet -->
+        <div class="modal" id="addProjectModal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Ajouter un Nouveau Projet</h2>
-                <form id="addProjectForm">
-                    <label for="projectTitle">Titre :</label>
-                    <input type="text" id="projectTitle" name="projectTitle" required>
+                <form>
+                    <label for="project-name">Nom du Projet</label>
+                    <input type="text" id="project-name" name="project-name" required>
 
-                    <label for="projectDescription">Description :</label>
-                    <textarea id="projectDescription" name="projectDescription" required></textarea>
+                    <label for="project-description">Description</label>
+                    <textarea id="project-description" name="project-description" required></textarea>
 
-                    <label for="projectDeadline">Date Limite :</label>
-                    <input type="date" id="projectDeadline" name="projectDeadline" required>
+                    <label for="project-deadline">Date Limite</label>
+                    <input type="date" id="project-deadline" name="project-deadline" required>
 
-                    <button type="submit">Ajouter le Projet</button>
+                    <button type="submit">Enregistrer</button>
                 </form>
             </div>
         </div>
-    </div>
+    </main>
 
-    <script src="/JavaScrip/projets.js" defer></script>
+    <!-- Interface Profil -->
+    <div id="profileInterface" class="profile-interface">
+        <div class="profile-info">
+            <img src="profile.jpg" alt="Image de Profil" class="profile-img">
+            <div class="profile-details">
+                <h3>Nom: Jean Dupont</h3>
+                <p>Poste: Chercheur Principal</p>
+                <p>Email: jean.dupont@techinnova.com</p>
+                <p>Département: R&D</p>
+                <button id="logoutBtn">Se Déconnecter</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="/JavaScrip/projets.js"></script>
 </body>
 </html>

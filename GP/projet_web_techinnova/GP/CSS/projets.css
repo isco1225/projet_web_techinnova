@@ -1,0 +1,203 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    font-size: 14px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1c1c1c;
+    color: #fff;
+    position: fixed;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sidebar h2 span {
+    color: #d13b22;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: rgb(227,44,3);
+    border-radius: 4px;
+    transform: scale(1.05);
+}
+
+/* Lien sélectionné */
+.sidebar nav ul li a.active {
+    background-color: rgb(150, 30, 3); /* Orange */
+    border-radius: 4px;
+    transform: scale(1.05);
+}
+
+/* Contenu principal */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Icônes du header (notifications et profil) */
+#header-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#notificationsBtn,
+#profilBtn {
+    width: 40px;
+    height: 40px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#notificationsBtn:hover,
+#profilBtn:hover {
+    background-color: rgb(227,44,3);
+    transform: scale(1.1);
+}
+
+/* Section des projets */
+.projects {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    border: 3px solid rgb(227,44,3);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    color: rgb(227,44,3);
+    text-transform: uppercase;
+}
+
+/* Modale pour ajouter un projet */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Nouveau style du bouton "Ajouter un Nouveau Projet" */
+#addProjectBtn {
+    background-color: rgb(227,44,3);
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#addProjectBtn i {
+    font-size: 18px;
+}
+
+#addProjectBtn:hover {
+    background-color: rgb(150, 30, 3);
+    transform: scale(1.05);
+}

@@ -5,51 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idées Innovantes - TechInnova</title>
     <link rel="stylesheet" href="/CSS/idees.css">
+    <!-- Lien vers Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Barre de navigation en haut -->
-    <div class="top-nav">
+    <div class="sidebar">
         <h2><span>TechIn</span>nova</h2>
         <nav>
             <ul>
                 <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
                 <li><a href="projets.html"><i class="fas fa-project-diagram"></i> Projets R&D</a></li>
-                <li><a href="idees.html"><i class="fas fa-lightbulb"></i> Idées Innovantes</a></li>
+                <li><a href="idees.html" class="active"><i class="fas fa-lightbulb"></i> Idées Innovantes</a></li>
                 <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
                 <li><a href="calendrier.html"><i class="fas fa-calendar-alt"></i> Calendrier</a></li>
             </ul>
         </nav>
-        <div id="header-icons">
-            <a href="/HTML/notifications.html" id="notificationsBtn"><i class="fas fa-bell"></i></a>
-            <a href="#" id="profilBtn"><i class="fas fa-user"></i></a>
-        </div>
     </div>
 
     <div class="main-content">
         <header>
             <h1>Idées Innovantes</h1>
-            <div class="search-container">
-                <input type="text" id="searchIdea" placeholder="Rechercher une idée...">
-                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            <div id="header-icons">
+                <a href="/HTML/notifications.html" id="notificationsBtn"><i class="fas fa-bell"></i></a>
+                <a href="profil.html" id="profilBtn"><i class="fas fa-user"></i></a>
+            </div>
         </header>
 
-        <!-- Liste des idées soumises -->
-        <section class="ideas-list">
+        <section class="ideas">
+            <div class="idea">
+                <h3><i class="fas fa-lightbulb"></i> Idée 1</h3>
+                <p>Description de l'idée 1</p>
+                <button class="viewDetailsBtn">Voir les détails</button>
+            </div>
+            <div class="idea">
+                <h3><i class="fas fa-lightbulb"></i> Idée 2</h3>
+                <p>Description de l'idée 2</p>
+                <button class="viewDetailsBtn">Voir les détails</button>
+            </div>
+            <!-- Ajouter d'autres idées ici -->
+        </section>
+
+        <section class="actions">
             <button id="addIdeaBtn">Ajouter une Nouvelle Idée</button>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Titre</th>
-                        <th>Description</th>
-                        <th>État</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="ideasTableBody">
-                    <!-- Les idées seront affichées ici -->
-                </tbody>
-            </table>
         </section>
 
         <!-- Modale pour ajouter une idée -->
@@ -72,21 +69,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Interface Profil -->
-    <div id="profileInterface" class="profile-interface">
-        <div class="profile-info">
-            <img src="profile.jpg" alt="Image de Profil" class="profile-img">
-            <div class="profile-details">
-                <h3>Nom: Jean Dupont</h3>
-                <p>Poste: Chercheur Principal</p>
-                <p>Email: jean.dupont@techinnova.com</p>
-                <p>Département: R&D</p>
-                <button id="logoutBtn">Se Déconnecter</button>
-            </div>
-        </div>
-    </div>
-</div>
 
     <script src="/JavaScrip/idees.js" defer></script>
 </body>
