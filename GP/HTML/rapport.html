@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Rapports</title>
+    <link rel="stylesheet" href="/CSS/rapport.css">
+</head>
+<body>
+    <header class="top-nav">
+        <h2>Tech<span>Innova</span></h2>
+        <nav>
+            <ul>
+                <li><a href="/HTML/projet_perso.html">Projets</a></li>
+                <li><a href="/HTML/echeance.html">Échéances</a></li>
+                <li><a href="/HTML/rapport.html" class="active">Rapports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Section pour ajouter un rapport -->
+        <section class="report-section">
+            <h2>Ajouter un rapport ou livrable</h2>
+            <form id="addReportForm">
+                <label for="projectSelect">Sélectionnez un projet :</label>
+                <select id="projectSelect">
+                    <option value="Projet Alpha">Projet Alpha</option>
+                    <option value="Projet Beta">Projet Beta</option>
+                </select>
+
+                <label for="fileInput">Ajouter un rapport ou livrable :</label>
+                <input type="file" id="fileInput" accept=".pdf,.docx,.xlsx">
+
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+
+        <!-- Section pour afficher les rapports -->
+        <section class="report-list-section">
+            <h2>Liste des rapports</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom du rapport</th>
+                        <th>Projet associé</th>
+                        <th>Date d'ajout</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="reportTableBody">
+                    <!-- Les rapports ajoutés seront affichés ici -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="/JavaScrip/rapport.js"></script>
+</body>
+</html>

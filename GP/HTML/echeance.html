@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Échéances & Rapports</title>
+    <link rel="stylesheet" href="/CSS/echeance.css">
+</head>
+<body>
+    <header class="top-nav">
+        <h2>Tech<span>Innova</span></h2>
+        <nav>
+            <ul>
+                <li><a href="/HTML/projet_perso.html">Projets</a></li>
+                <li><a href="/HTML/echeance.html" class="active">Échéances</a></li>
+                <li><a href="/HTML/rapport.html">Rapports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Section Échéances clés -->
+        <section class="timeline-section">
+            <h2>Échéances clés</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date">01/02/2025</span>
+                    <p>Lancement de la phase 2 du projet Alpha.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">15/02/2025</span>
+                    <p>Finalisation des livrables pour le projet Beta.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">01/03/2025</span>
+                    <p>Présentation des résultats au comité exécutif.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Ajout de rapports -->
+        <section class="report-section">
+            <h2>Ajouter un rapport ou livrable</h2>
+            <form id="reportForm">
+                <label for="projectReport">Sélectionnez un projet :</label>
+                <select id="projectReport">
+                    <option>Projet Alpha</option>
+                    <option>Projet Beta</option>
+                </select>
+                <label for="reportInput">Ajouter un rapport ou livrable :</label>
+                <input type="file" id="reportInput" accept=".pdf,.docx,.xlsx">
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="/JavaScrip/echeance.js"></script>
+</body>
+</html>

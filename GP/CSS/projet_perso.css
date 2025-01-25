@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Style général */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    font-size: 14px;
+}
+
+header.top-nav {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header h2 span {
+    color: #d13b22;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+header nav ul li a.active {
+    background-color: #d13b22;
+    color: white;
+    border-radius: 5px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+/* Section des projets */
+.projects-section, .update-section, .report-section, .timeline-section {
+    margin-bottom: 30px;
+}
+
+.projects-section h2, .update-section h2, .report-section h2, .timeline-section h2 {
+    color: #d13b22;
+    margin-bottom: 10px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #d13b22;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    color: #d13b22;
+}
+
+.details-btn {
+    background-color: #d13b22;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.details-btn:hover {
+    background-color: #a62a18;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form textarea, form input, form select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #d13b22;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #a62a18;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.timeline-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #d13b22;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item .date {
+    font-weight: bold;
+    color: #333;
+}
