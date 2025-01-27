@@ -5,6 +5,7 @@ body {
     background-color: #f4f4f4;
     font-size: 14px;
     overflow-x: hidden;
+    padding-top: 50px;
 }
 
 /* Barre de navigation supérieure */
@@ -20,6 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    height: 50px;
 }
 
 .top-nav h2 {
@@ -134,210 +136,133 @@ body {
 }
 
 
-/* Section principale */
-.main-content {
-    padding-top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-
-
-/* Barre de recherche */
-.search-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-#searchIdea {
-    width: 50%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 25px;
-    transition: width 0.5s ease-in-out;
-}
-#searchIdea:focus{
-    width: 70%;
-    border-color: #d13b22;
-
-}
-
-.search-container button{
-    background-color: #d13b22;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 20px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.search-container button:hover{
-    transform: scale(1.1);
-}
-
-
-/* Section des projets */
-.projects-section {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.project-card {
-    background-color: #fff;
+.container {
     padding: 20px;
-    width: 30%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border: 3px solid rgb(227, 44, 3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.project-card h3 {
-    margin-bottom: 10px;
-    color: rgb(227, 44, 3);
-    text-transform: uppercase;
-}
-
-.details-btn {
-    background-color: #d13b22;
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.details-btn:hover {
-    background-color: #a62a18;
-}
-
-/* Bouton "Ajouter un Nouveau Projet" */
-#addProjectBtn {
-    background-color: #d13b22;
-    color: #fff;
-    padding: 10px 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 30px;
-}
-
-#addProjectBtn:hover {
-    background-color: #a62a18;
-    transform: scale(1.05);
-}
-
-/* Modale "Ajouter un Nouveau Projet" */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+    box-sizing: border-box;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.modal-content {
-    background-color: #fff;
-    width: 50%;
-    max-width: 500px;
-    height: 70%;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-}
-
-.modal-content h2 {
-    color: rgb(227, 44, 3);
-    margin-bottom: 20px;
-}
-
-.modal .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 25px;
-    color: #333;
-    cursor: pointer;
-}
-
-.modal .close:hover {
-    color: #d13b22;
-}
-
-/* Formulaire dans la modale */
-form {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: flex-start;
+    position: relative; /* Assurez-vous qu'il soit correctement positionné par rapport à son parent */
+    margin-top: 50px; /* Déclenche un espace de 50px sous la top-nav */
 }
 
-label {
-    font-weight: bold;
+
+header h1 {
+    color: #333;
+    font-size: 2em;
 }
 
-input, textarea {
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-textarea {
-    resize: vertical;
-    max-height: 100px;
+.filter-options {
+    display: flex;
+    gap: 20px;
 }
 
-button[type="submit"] {
-    background-color: #d13b22;
-    color: white;
-    padding: 10px 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+input, select {
+    padding: 8px;
+    font-size: 1em;
 }
 
-button[type="submit"]:hover {
-    background-color: #a62a18;
-}
-
-.button{
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
     background-color: white;
-    text-decoration: none;
-    color: #a62a18;
-    border-color: #a62a18;
-    padding: 10px 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    
 }
-.button:hover {
-    background-color: #a62a18;
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status.ongoing {
+    background-color: #df0303;
     color: white;
 }
 
+.status.upcoming {
+    background-color: #f48907;
+    color: white;
+}
+
+.status.completed {
+    background-color: #b83726;
+    color: white;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+
+#project-members {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#project-members h2 {
+    color: #333;
+    font-size: 1.8em;
+}
+
+#members-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#members-table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 7px 3px;
+    background-color:  #d13b22 ;
+    border-color: white;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color:  #a62a18;
+}

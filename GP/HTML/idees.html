@@ -26,52 +26,86 @@
         </div>
     </div>
 
-    <div class="main-content">
-        <header>
-            <h1>Idées Innovantes</h1>
-            <div class="search-container">
-                <input type="text" id="searchIdea" placeholder="Rechercher une idée...">
-                <button id="searchBtn"><i class="fas fa-search"></i></button>
-        </header>
+    <div class="container" id="idee-innovante">
 
-        <!-- Liste des idées soumises -->
-        <section class="ideas-list">
-            <button id="addIdeaBtn">Ajouter une Nouvelle Idée</button>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Titre</th>
-                        <th>Description</th>
-                        <th>État</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="ideasTableBody">
-                    <!-- Les idées seront affichées ici -->
-                </tbody>
-            </table>
+        <!-- Section : Formulaire de soumission d'idée -->
+        <section id="soumission-idee">
+          <h2>Soumettre une idée innovante</h2>
+          <form id="form-soumission">
+      
+            <!-- Champ : Titre de l'idée -->
+            <label for="titre">Titre de l'idée<span>*</span></label>
+            <input type="text" id="titre" name="titre" placeholder="Entrez le titre de l'idée" required>
+      
+            <!-- Champ : Description -->
+            <label for="description">Description détaillée<span>*</span></label>
+            <textarea id="description" name="description" placeholder="Décrivez votre idée" required></textarea>
+      
+            <!-- Champ : Catégorie -->
+            <label for="categorie">Catégorie<span>*</span></label>
+            <select id="categorie" name="categorie" required>
+              <option value="">--Choisir une catégorie--</option>
+              <option value="IA">IA</option>
+              <option value="IoT">IoT</option>
+              <option value="Robotique">Robotique</option>
+            </select>
+      
+            <!-- Champ : Mots-clés -->
+            <label for="mots-cles">Mots-clés</label>
+            <input type="text" id="mots-cles" name="mots-cles" placeholder="Ajoutez des mots-clés">
+      
+            <!-- Champ : Documents annexes -->
+            <label for="documents">Documents annexes</label>
+            <input type="file" id="documents" name="documents" multiple>
+      
+            <!-- Champ : Budget estimatif -->
+            <label for="budget">Budget estimatif</label>
+            <input type="number" id="budget" name="budget" placeholder="Entrez un montant">
+      
+            <!-- Bouton : Soumettre -->
+            <button type="submit" id="btn-soumettre">Soumettre</button>
+      
+          </form>
         </section>
-
-        <!-- Modale pour ajouter une idée -->
-        <div id="addIdeaModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Ajouter une Nouvelle Idée</h2>
-                <form id="addIdeaForm">
-                    <label for="ideaTitle">Titre :</label>
-                    <input type="text" id="ideaTitle" name="ideaTitle" required>
-
-                    <label for="ideaDescription">Description :</label>
-                    <textarea id="ideaDescription" name="ideaDescription" required></textarea>
-
-                    <label for="ideaCategory">Catégorie :</label>
-                    <input type="text" id="ideaCategory" name="ideaCategory" required>
-
-                    <button type="submit">Ajouter l'Idée</button>
-                </form>
-            </div>
-        </div>
-    </div>
+      
+        <!-- Section : Liste des idées soumises -->
+        <section id="liste-idees">
+          <h2>Liste des idées soumises</h2>
+      
+          <!-- Tableau des idées soumises -->
+          <table id="table-idees">
+            <thead>
+              <tr>
+                <th>Titre</th>
+                <th>Date de soumission</th>
+                <th>État</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Idée 1</td>
+                <td>2025-01-01</td>
+                <td>En attente</td>
+                <td>
+                  <button class="btn-consulter">Consulter</button>
+                  <button class="btn-modifier">Modifier</button>
+                  <button class="btn-supprimer">Supprimer</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Idée 2</td>
+                <td>2025-01-15</td>
+                <td>Acceptée</td>
+                <td>
+                  <button class="btn-consulter">Consulter</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      
+      </div>        
 
     <!-- Interface Profil -->
     <div id="profileInterface" class="profile-interface">

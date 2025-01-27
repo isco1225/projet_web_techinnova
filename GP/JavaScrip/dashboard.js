@@ -42,6 +42,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Animation des éléments lorsqu'ils apparaissent dans la vue
+const elements = document.querySelectorAll('.project-item, .notification-item, .stats-item');
+
+const options = {
+    threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, options);
+
+elements.forEach(element => {
+    observer.observe(element);
+});
+
+
+// Ajouter une animation de défilement pour la section 'Recent Code'
+const recentCodeSection = document.getElementById('recentCode');
+
+// Fonction pour détecter le défilement
+window.addEventListener('scroll', () => {
+    const rect = recentCodeSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+        recentCodeSection.classList.add('visible');
+    }
+});
+
+
+
     // Afficher l'interface du profil
     const profilBtn = document.getElementById('profilBtn');
     const profileInterface = document.createElement('div');

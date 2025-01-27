@@ -1,3 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-shadow: border-box ;
+}
+
+
 /* Style général */
 body {
     margin: 0;
@@ -136,18 +143,141 @@ body {
     background-color: #a62a18;
 }
 
-/* Section d'accueil */
-.welcome-section {
-    text-align: center;
-    margin-top: 50px;
-    animation: fadeIn 2s ease-in-out; /* Animation d'apparition */
+/* Style général de l'interface d'accueil */
+.dashboard-welcome {
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    color: #333;
+    background-image: url('/BGED/smiley-man-doing-presentation-meeting_23-2148817043.jpg'); 
+    background-color: rgba(0, 0, 0, 0.5);/* Remplace par l'URL de ton image */
+    background-size: cover; /* L'image couvre tout l'espace */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Évite les répétitions */
+    height: 100%; /* S'assure que l'image prend toute la hauteur */
+    width: 100%; /* S'assure que l'image prend toute la largeur */
 }
 
-/* Animation de fondu */
+/* Entête accueillante */
+.welcome-header {
+    text-align: center;
+    margin-bottom: 200px;
+    
+}
+
+.welcome-header h1 {
+    font-size: 36px;
+    color: #ff5722;
+    margin-bottom: 30px;
+    position: relative;
+    top: 80px;
+
+}
+
+.welcome-header p {
+    font-size: 18px;
+    color: #141212;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    position: relative;
+    top: 80px;
+
+}
+
+.explore-btn {
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    top: 80px;
+}
+
+.explore-btn:hover {
+    background-color: #e64a19;
+
+}
+
+/* Section pour l'image */
+.welcome-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.welcome-img {
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section des codes récents */
+.recent-code {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.recent-code.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.recent-code h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.code-snippets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.code-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.code-item h3 {
+    font-size: 22px;
+    color: #f44336;
+    border-color: 2px solid #f9f9f9;
+    margin-bottom: 10px;
+}
+
+pre code {
+    background-color:  #9c9a9a;
+    border: 2px solid #f5f5f5;
+    color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    font-size: 16px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Animation d'apparition lors du défilement */
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(50px);
     }
     100% {
         opacity: 1;
@@ -155,67 +285,159 @@ body {
     }
 }
 
-#welcome-text {
-    font-size: 30px;
-    font-weight: bold;
-    color: #d13b22; /* Couleur professionnelle */
-    letter-spacing: 1.5px;
+
+
+/* Styles généraux */
+.dashboard {
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
     text-transform: uppercase;
-    animation: textAnimation 3s ease-in-out forwards;
+    margin-bottom: 20px;
 }
 
-/* Animation du texte */
-@keyframes textAnimation {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+/* Vue d'ensemble des projets */
+.projects-overview {
+    margin-bottom: 30px;
 }
 
-
-/* Contenu principal */
-.main-content {
-    padding-top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-/* Animation des cartes statistiques */
-.stats {
+.project-list {
     display: flex;
     gap: 20px;
-    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-.card {
+.project-item {
     background-color: #fff;
     padding: 20px;
+    width: 30%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    text-align: center;
-    border: 3px solid rgb(227, 44, 3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.project-item:hover {
+    transform: translateY(-5px);
 }
 
-.card h3 {
+.progress-bar {
+    height: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.project-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+}
+
+.status {
+    font-weight: bold;
+    color: #333;
+}
+
+.deadline {
+    color: #ff5722;
+}
+
+.filters {
+    margin-top: 10px;
+}
+
+.filter-btn {
+    background-color:  #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    background-color: white;
+    color:   #f44336;
+}
+
+/* Alertes et notifications */
+.notifications {
+    margin-bottom: 30px;
+}
+
+.notification-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
-    color: rgb(227, 44, 3);
-    text-transform: uppercase;
+}
+
+.alert-type {
+    font-weight: bold;
+    color: #d13b22;
+}
+
+/* Statistiques personnalisées */
+.statistics {
+    margin-bottom: 30px;
+}
+
+.stats-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.stats-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Accès rapide */
+.quick-access {
+    margin-bottom: 30px;
+}
+
+.quick-action-btn {
+    background-color: #d13b22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.quick-action-btn:hover {
+    background-color: #a62a18;
+}
+
+/* Animation pour les éléments */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.project-item, .notification-item, .stats-item, .quick-action-btn {
+    animation: slideIn 0.5s ease-out;
 }
 
 /* Bouton "Ajouter un Nouveau Projet" */

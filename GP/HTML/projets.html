@@ -26,74 +26,86 @@
         </div>
     </header>
 
-    <!-- Section principale -->
-    <main class="main-content">
+    <div class="container">
+        <!-- Titre et filtres -->
         <header>
-            <h1>Projets R&D</h1>
-            <div class="search-container">
-                <input type="text" id="searchIdea" placeholder="Rechercher une idée...">
-                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            <h1>Projets de Recherche et Développement</h1>
+            <div class="filters">
+                <input type="text" id="search" placeholder="Rechercher un projet...">
+                <div class="filter-options">
+                    <label for="status">État :</label>
+                    <select id="status">
+                        <option value="all">Tous</option>
+                        <option value="ongoing">En cours</option>
+                        <option value="upcoming">À venir</option>
+                        <option value="completed">Terminé</option>
+                    </select>
+                    <label for="category">Catégorie :</label>
+                    <select id="category">
+                        <option value="all">Toutes</option>
+                        <option value="software">Software</option>
+                        <option value="hardware">Hardware</option>
+                        <option value="methods">Méthodes</option>
+                    </select>
+                </div>
+            </div>
         </header>
-        <!-- Bouton pour ajouter un projet -->
-        <button id="addProjectBtn">Ajouter un Nouveau Projet</button>
-        <a href="/HTML/projet_perso.html"  class="button">projet en cours</a>
 
-        <!-- Section des projets -->
-        <section class="projects-section">
-            <div class="project-card" data-animation="slideIn">
-                <h3>Projet Alpha</h3>
-                <p>Développement d'un système IA pour l'optimisation des processus.</p>
-                <button class="details-btn">Voir les détails</button>
-            </div>
-
-            <div class="project-card" data-animation="slideIn">
-                <h3>Projet Beta</h3>
-                <p>Recherche sur les énergies renouvelables pour les entreprises technologiques.</p>
-                <button class="details-btn">Voir les détails</button>
-            </div>
-
-            <div class="project-card" data-animation="slideIn">
-                <h3>Projet Gamma</h3>
-                <p>Conception d'une application mobile pour la gestion des événements.</p>
-                <button class="details-btn">Voir les détails</button>
-            </div>
+        <!-- Tableau des projets -->
+        <table id="projects-table">
+            <thead>
+                <tr>
+                    <th>Titre du projet</th>
+                    <th>Description</th>
+                    <th>État</th>
+                    <th>Progression</th>
+                    <th>Membres</th>
+                    <th>Échéance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="projects-list">
+                <!-- Liste des projets ici -->
+            </tbody>
+        </table>
+        <button id="add-new-project-btn">Ajouter un Nouveau Projet</button>
         </section>
 
-        <!-- Modale d'ajout de projet -->
-        <div class="modal" id="addProjectModal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Ajouter un Nouveau Projet</h2>
-                <form>
-                    <label for="project-name">Nom du Projet</label>
-                    <input type="text" id="project-name" name="project-name" required>
+    <section id="project-members">
+    <h2>Gestion des Membres</h2>
+    <table id="members-table">
+        <thead>
+            <tr>
+                <th>Membre</th>
+                <th>Rôle</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="members-list">
+            <!-- Liste des membres -->
+        </tbody>
+    </table>
+    <button id="add-member-btn">Ajouter un Membre</button>
+    </section>
 
-                    <label for="project-description">Description</label>
-                    <textarea id="project-description" name="project-description" required></textarea>
 
-                    <label for="project-deadline">Date Limite</label>
-                    <input type="date" id="project-deadline" name="project-deadline" required>
-
-                    <button type="submit">Enregistrer</button>
-                </form>
-            </div>
-        </div>
-    </main>
-
-    <!-- Interface Profil -->
-    <div id="profileInterface" class="profile-interface">
-        <div class="profile-info">
-            <img src="profile.jpg" alt="Image de Profil" class="profile-img">
-            <div class="profile-details">
-                <h3>Nom: Jean Dupont</h3>
-                <p>Poste: Chercheur Principal</p>
-                <p>Email: jean.dupont@techinnova.com</p>
-                <p>Département: R&D</p>
-                <button id="logoutBtn">Se Déconnecter</button>
+        <!-- Interface Profil -->
+        <div id="profileInterface" class="profile-interface">
+            <div class="profile-info">
+                <img src="profile.jpg" alt="Image de Profil" class="profile-img">
+                <div class="profile-details">
+                    <h3>Nom: Jean Dupont</h3>
+                    <p>Poste: Chercheur Principal</p>
+                    <p>Email: jean.dupont@techinnova.com</p>
+                    <p>Département: R&D</p>
+                    <button id="logoutBtn">Se Déconnecter</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    
+
 
     <script src="/JavaScrip/projets.js"></script>
 </body>
