@@ -21,36 +21,56 @@
                 <li><a href="doc.html" data-page="documents">Documents</a></li>
             </ul>
         </nav>
+        <div class="user-icons">
+            <div class="user-icon">
+                <a href="notification.html"><i class="fas fa-bell"></i></a>
+            </div>
+            <div class="user-icon">
+                <a href="page_utilisateur.html"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </div>
     </header>
 
     <!-- Contenu principal -->
     <main id="content">
-        <h2>Détails du Projet : Projet Alpha</h2>
+        <h2>Détails du Projet</h2>
+        <p class="intro">Découvrez les informations détaillées sur ce projet.</p>
+
+        <!-- Informations du projet -->
         <section class="project-details">
-            <h3>Description</h3>
-            <p>Développement d'une IA innovante pour améliorer les processus industriels et automatiser des tâches complexes.</p>
-
-            <h3>Avancement</h3>
-            <p>50%</p>
-
-            <h3>Équipe Responsable</h3>
-            <p>Jean Dupont, Claire Fontaine, Marc Durand</p>
-
-            <h3>Échéance</h3>
-            <p>30/01/2025</p>
-
-            <h3>Commentaires</h3>
-            <p>Aucune remarque supplémentaire pour le moment.</p>
+            <h3>Projet Alpha</h3>
+            <p><strong>Description :</strong> Développement d'une IA innovante.</p>
+            <p><strong>Avancement :</strong> 50%</p>
+            <p><strong>Échéance :</strong> 30/01/2025</p>
         </section>
 
-        <div class="action-buttons">
-            <a href="page_projet.html"><button>Retour</button></a>
-            <a href="commentaire.html"><button>Ajouter un Commentaire</button></a>
+        <!-- Fichiers téléchargés -->
+        <section class="project-files">
+            <h3>Fichiers téléchargés</h3>
+            <ul>
+                <li><a href="/fichiers/planification.pdf" download><i class="fas fa-file-pdf"></i> Planification.pdf</a></li>
+                <li><a href="/fichiers/design_maquette.png" download><i class="fas fa-file-image"></i> Design_Maquette.png</a></li>
+                <li><a href="/fichiers/resultats_tests.xlsx" download><i class="fas fa-file-excel"></i> Resultats_Tests.xlsx</a></li>
+            </ul>
+        </section>
+
+        <!-- Personnes associées -->
+        <section class="project-team">
+            <h3>Personnes associées au projet</h3>
+            <ul>
+                <li><i class="fas fa-user"></i> Jean Dupont - Chef de projet</li>
+                <li><i class="fas fa-user"></i> Marie Curie - Ingénieure IA</li>
+                <li><i class="fas fa-user"></i> Ahmed Benali - Développeur</li>
+                <li><i class="fas fa-user"></i> Sophie Laurent - Designer</li>
+            </ul>
+        </section>
+
+        <!-- Actions -->
+        <div class="actions">
+            <button class="back-button" onclick="window.history.back()">Retour</button>
         </div>
     </main>
 
-    <script>
-        // Placeholder for any future interactive features
-    </script>
 </body>
 </html>
+
