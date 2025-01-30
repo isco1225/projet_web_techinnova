@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - TechInnova</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><span>TECHIN</span>NOVA</h1>
+            </div>
+            <div class="buttons">
+                <button class="btn-header">Se connecter</button>
+                <button class="btn-header">S'inscrire</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h2>BIENVENUE</h2>
+                <h1>Sur le site de TechInnova</h1>
+                <p>Connecter les esprits, propulser l'innovation</p>
+                <button class="btn-primary">Rejoignez-nous</button>
+            </div>
+            <div class="hero-image">
+                <img src="1.jpg" alt="Hero Image">
+            </div>
+        </section>
+
+        <section class="info">
+            <div class="info-content">
+                <div class="content-text">
+                    <h2>Collaboration et Partenariats</h2>
+                    <p>Chez TechInnova, nous croyons en la puissance des collaborations. En unissant nos forces avec des partenaires stratégiques, nous favorisons l'innovation, accélérons le progrès et créons des solutions technologiques d'impact. Ensemble, nous construisons l'avenir.</p>
+                </div>
+                <div class="content-image">
+                    <img src="3.jpg" alt="Info Image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #d13b22, #ec473e);
+        padding: 15px 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .logo span {
+            color: white;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #ffddc1;
+        }
+        .buttons .btn-header {
+            background-color: #fff;
+            color: #d13b22;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+        .buttons .btn-header:hover {
+            background-color: #ffddc1;
+            color: #b0301c;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #fff;
+            margin: 30px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .hero-text {
+            max-width: 50%;
+        }
+        .hero-text h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .hero-text h2 {
+            font-size: 32px;
+            color: #d13b22;
+        }
+        .hero-text p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .btn-primary {
+            background-color: #d13b22;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #b0301c;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        .hero-image img {
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .info {
+            padding: 50px 20px;
+            background-color: #fff;
+            margin: 30px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .info-content {
+            display: flex;
+            align-items: center;
+        }
+        .content-text {
+            flex: 1;
+            padding: 20px;
+        }
+        .content-text h2 {
+            font-size: 28px;
+            color: #d13b22;
+        }
+        .content-text p {
+            font-size: 18px;
+        }
+        .content-image {
+            flex: 1;
+            text-align: center;
+        }
+        .content-image img {
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+        .text-container {
+            max-width: 600px;
+            margin-top: 20px;
+        }
+        
+
+        .v {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;    
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+        .v-text {
+            max-width: 50%;
+        }
+        .v-text h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .v-text h2 {
+            font-size: 32px;
+            color: black;
+        }
+        .v-text p {
+            font-size: 18px;
+            margin: 20px 0;
+            color: black;
+        }
+        .v-image {
+            flex: 1;
+            text-align: center;
+        }
+        .v-image img {
+            max-width: 60%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-logo h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #d13b22;
+}
+
+.footer-logo span {
+    color: white;
+    font-weight: bold;
+}
+
+.footer-logo p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-links, .footer-social {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-links h3, .footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #d13b22;
+    text-transform: uppercase;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ffddc1;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #d13b22;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ddd;
+}
+    </style>
+       <section class="v">
+            <div class="v-image">
+                <img src="2.jpg" alt="Collaboration">
+            </div>
+            <div class="v-text">
+                <h2>TechInnova est une plateforme dédiée à l'innovation technologique et à la collaboration.</h2>
+                <p>TechInnova est une plateforme dédiée à l'innovation technologique et à la collaboration. Elle vise à connecter les esprits créatifs,
+                    encourager les échanges et propulser des solutions novatrices pour un avenir meilleur. En réunissant des experts, des entreprises et des passionnés de technologie,
+                    TechInnova favorise la co-création et le partage de connaissances pour relever les défis de demain.</p>
+            </div>
+       </section>
+       
+
+
+       <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2><span>TECHIN</span>NOVA</h2>
+                <p>Innovation pour un avenir meilleur.</p>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechInnova. Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
