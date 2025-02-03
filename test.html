@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapports et Statistiques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .card {
+            background: #007BFF;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 200px;
+            margin: 10px;
+        }
+        .chart-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Rapports et Statistiques</h2>
+        
+        <div class="stats">
+            <div class="card">
+                <h3>Projets en cours</h3>
+                <p>12</p>
+            </div>
+            <div class="card" style="background: #28a745;">
+                <h3>Projets terminés</h3>
+                <p>8</p>
+            </div>
+            <div class="card" style="background: #ffc107;">
+                <h3>Idées soumises</h3>
+                <p>25</p>
+            </div>
+            <div class="card" style="background: #dc3545;">
+                <h3>Idées rejetées</h3>
+                <p>5</p>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <h3>État des Projets</h3>
+            <img src="https://via.placeholder.com/400" alt="Graphique circulaire">
+        </div>
+        
+        <h3>Derniers Rapports</h3>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Projet</th>
+                <th>Statut</th>
+            </tr>
+            <tr>
+                <td>01/02/2025</td>
+                <td>Projet Alpha</td>
+                <td>Terminé</td>
+            </tr>
+            <tr>
+                <td>25/01/2025</td>
+                <td>Projet Beta</td>
+                <td>En cours</td>
+            </tr>
+            <tr>
+                <td>15/01/2025</td>
+                <td>Projet Gamma</td>
+                <td>En attente</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

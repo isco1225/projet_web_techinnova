@@ -13,7 +13,6 @@ if (isset($_SESSION['message'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -26,8 +25,8 @@ if (isset($_SESSION['message'])) {
                 <li><a href="">Idées innovantes</a></li>
                 <li><a href="">À Propos</a></li>
             </ul>
-            <button>Connexion</button>
-            <button>Inscription</button>
+            <button id="conn" class="btn_conn">Connexion</button>
+            <button id="inscript">Inscription</button>
         </nav>
     </header>
     <main>
@@ -141,6 +140,8 @@ if (isset($_SESSION['message'])) {
     <footer>
         &copy; Copyright TechInnova 2025
     </footer>
+
+
 <!--
     
     <a href="connexions/page_inscription.php">inscription</a>
@@ -166,4 +167,6 @@ if (isset($_SESSION['message'])) {
 
    
 </body>
+<script src="script.js" defer></script>
+
 </html>
