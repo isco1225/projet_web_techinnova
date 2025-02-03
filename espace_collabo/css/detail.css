@@ -1,0 +1,145 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.logo span {
+    color: #d13b22;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #d13b22;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #a11d17;
+}
+
+/* Contenu principal */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #d13b22;
+    margin-bottom: 20px;
+}
+
+.project-details h3 {
+    font-size: 20px;
+    margin: 15px 0 5px;
+    color: #333;
+}
+
+.project-details p {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Boutons d'action */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.action-buttons button:first-child {
+    background-color: #ddd;
+    color: #333;
+}
+
+.action-buttons button:first-child:hover {
+    background-color: #bbb;
+    transform: scale(1.05);
+}
+
+.action-buttons button:last-child {
+    background-color: #d13b22;
+    color: #fff;
+}
+
+.action-buttons button:last-child:hover {
+    background-color: #a11d17;
+    transform: scale(1.05);
+}
+.overlay {
+    display: none; /* Cachée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur noire semi-transparente */
+    z-index: 1000; /* Assure qu'elle est au-dessus de tout */
+}
+
+/* Boîte affichée au-dessus de la superposition */
+.boite {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 150px;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Au-dessus de l'overlay */
+}

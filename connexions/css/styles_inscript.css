@@ -1,0 +1,89 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.titre a{
+    text-decoration: none;
+    color: rgb(227, 44, 3);
+    cursor: default;
+}
+.titre{
+    margin: 10px;
+    color: rgb(255, 64, 0);
+    font-weight: 800;
+}
+.titre span{
+    color: black;
+}
+.container {
+    margin: 30px auto;
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+hr{
+    margin-top: 15px;
+}
+.lien_conn{
+    color: rgb(255, 64, 0);
+}
+.form-container {
+    text-align: center;
+}
+.form-container h1{
+    margin-top: -10px;
+}
+.social-icons {
+    margin: 10px;
+}
+
+.social-icons .icon {
+    color: rgb(227, 44, 3);
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: rgb(208, 38, 0);
+    color: white;
+    padding: 10px 20px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: rgb(227, 29, 29);
+}
+
+p {
+    margin-top: 10px;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
